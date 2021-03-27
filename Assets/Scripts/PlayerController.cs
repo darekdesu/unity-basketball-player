@@ -21,8 +21,8 @@ public class PlayerController : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.forward * horizontalInput * Time.deltaTime * speed);
-        transform.Translate(Vector3.left * verticalInput * Time.deltaTime * speed);
+        transform.Translate(Vector3.forward * (horizontalInput * Time.deltaTime * speed));
+        transform.Translate(Vector3.left * (verticalInput * Time.deltaTime * speed));
 
         if (ballInHand != null)
         {
